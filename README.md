@@ -32,12 +32,17 @@ Things I've implemented:
 
 FAQ:
 - Have you used AI?
+
 → Yes, I've used AI to write the code. I completed this project using Vibe coding, but the logic and architecture were designed by me only.
 
 - Is this a production-grade app?
+
 → Yes, it is production-grade, but I've used SQLite database for this assignment. We can use a better database for a production-grade app.
+
 → I've implemented logging with Winston that provides detailed descriptions and error logs as expected in a production app.
+
 → The architecture is scalable - we can easily add new APIs, controllers, models, and cron jobs.
+
 → Even for the database, I've written migrations so anyone can start the project, run migrations, and have a ready-to-use project.
 
 ---
