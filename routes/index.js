@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const { citiesValidation } = require('../middleware/validation');
+const { getCitiesByCountry } = require('../controllers/citiesController');
+const { healthCheck } = require('../controllers/healthController');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/health', healthCheck);
+router.get('/cities/:countryCode', citiesValidation, getCitiesByCountry);
 
 module.exports = router;
